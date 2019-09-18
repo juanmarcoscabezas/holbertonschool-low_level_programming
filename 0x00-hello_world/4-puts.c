@@ -6,7 +6,7 @@
  *
  * prints a string
  *
- * Return: Always 00 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
