@@ -5,7 +5,7 @@
 /**
  * main - Entry point
  *
- * This function print the alphabet a...z
+ * This function print the alphabet a...z, A...Z
  *
  * Return: Always 0 (success)
  */
@@ -16,6 +16,11 @@ int main(void)
 
 	for (aux = 'a'; aux <= start; aux++)
 	{
+		if (aux == 'z')
+		{
+			aux = 'A';
+			start = 'Z';
+		}
 		putchar(aux);
 	}
 	putchar('\n');
