@@ -17,7 +17,10 @@ int main(void)
 	{
 		putchar((aux % 10) + '0');
 		if (aux < 9)
+		{
 			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
