@@ -16,7 +16,7 @@ int main(void)
 	for (aux = 0; aux < 10; aux++)
 	{
 		putchar((aux % 10) + '0');
-		if (aux < 9) 
+		if (aux < 9)
 			putchar(',');
 	}
 	putchar('\n');
