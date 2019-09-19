@@ -28,7 +28,7 @@ int main(void)
 				if (aux != 98 || aux2 != 99)
 				{
 					putchar(',');
-					putchar('\n');
+					putchar(' ');
 				}
 			}
 		}
