@@ -16,11 +16,11 @@ int main(void)
 
 	for (aux = 'a'; aux <= start; aux++)
 	{
-		if (aux == 'z')
-		{
-			aux = 'A';
-			start = 'Z';
-		}
+		putchar(aux);
+	}
+	start = 'Z';
+	for (aux = 'A'; aux <= start; aux++)
+	{
 		putchar(aux);
 	}
 	putchar('\n');
