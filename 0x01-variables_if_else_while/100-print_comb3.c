@@ -18,13 +18,15 @@ int main(void)
 	{
 		for (aux2 = 0; aux2 < 10; aux2++)
 		{
-			
 			if (aux != aux2 && aux < aux2)
 			{
 				putchar((aux % 10) + '0');
 				putchar((aux2 % 10) + '0');
-				putchar(',');
-				putchar(' ');
+				if (aux != 8 || aux2 != 9)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
