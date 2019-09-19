@@ -25,8 +25,11 @@ int main(void)
 				putchar(' ');
 				putchar(((aux2 / 10) % 10) + '0');
 				putchar((aux2 % 10) + '0');
-				putchar(',');
-				putchar('\n');
+				if (aux != 98 || aux2 != 99)
+				{
+					putchar(',');
+					putchar('\n');
+				}
 			}
 		}
 	}
