@@ -18,7 +18,7 @@ int main(void)
 		aux = fibonacci;
 		fibonacci = fibonacci + last;
 		last = aux;
-		if(fibonacci % 2 == 0)
+		if (fibonacci % 2 == 0)
 		{
 			even = even + fibonacci;
 		}
