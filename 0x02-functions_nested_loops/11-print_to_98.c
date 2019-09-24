@@ -22,24 +22,28 @@ void print_to_98(int n)
 		n_copy = n_copy / 10;
 		n_div = n_div * 10;
 	}
-	printf("Inicio de n = %d\n" , n);
 	if (n > 98)
 	{
 		for (start = n; start >= 98; start--)
 		{
 			int start_copy = start;
 			int n_div_copy = n_div;
+			int n_div_aux = n_div;
 			while (start_copy > 9)
-			{	
-				printf("%d-%d-%d\n",n , start_copy, n_div_copy);
-				_putchar((start_copy / n_div_copy) + '0');
+			{
 				start_copy = start_copy / 10;
 				n_div_copy = n_div_copy / 10;
+				if (start_copy <= 9)
+				{
+					_putchar(start_copy + '0');
+					n_div_aux = n_div_aux / 10;
+					n_div_copy = n_div_aux;
+					start_copy = start_copy / n_div_copy;
+				}
 			}
 			_putchar((start % 10) + '0');
 			_putchar(',');
 			_putchar(' ');
-			_putchar('\n');
 		}
 	}
 	else if (n == 98)
@@ -49,7 +53,7 @@ void print_to_98(int n)
 	}
 	else
 	{
-		_putchar('@');
+		
 	}
 	_putchar('\n');
 }
