@@ -1,13 +1,13 @@
 #include "holberton.h"
+
 /**
- * main - Entry point
- * 
+ * print_alphabet - Entry point
+ *
  * Description: This function prints the alphabet using the function _putchar
- * 
+ *
  * Return: Always 0
  */
-
-void print_alphabet()
+void print_alphabet(void)
 {
 	char letter;
 
@@ -16,5 +16,4 @@ void print_alphabet()
 		_putchar(letter);
 	}
 	_putchar('\n');
-	return;
 }
