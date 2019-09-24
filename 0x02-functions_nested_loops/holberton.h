@@ -33,12 +33,23 @@ void print_alphabet_x10(void);
 /**
  * _islower - knows if a character is in lowercase
  *
- * Description: This function returns
+ * Description: This function return the response of character
  *
  * @c: character parameter
  *
  * Return: 1 if c is lowercase, 0 otherwise
  */
 int _islower(int c);
+
+/**
+ * _isalpha - knows if a character is an alphanumeric
+ *
+ * Description: This function returns the response of character
+ *
+ * @c: character parameter
+ *
+ * Return: 1 if c is an alpha, 0 otherwise
+ */
+int _isalpha(int c);
 
 #endif
