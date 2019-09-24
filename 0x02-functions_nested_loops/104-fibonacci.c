@@ -15,7 +15,7 @@ int main(void)
 
 	for (start = 0; start < 100; start++)
 	{
-		if (start < 100)
+		if (start < 99)
 			printf("%lu, ", fibonacci);
 		else
 			printf("%lu", fibonacci);
