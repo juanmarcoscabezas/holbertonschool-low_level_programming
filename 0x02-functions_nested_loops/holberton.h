@@ -124,4 +124,14 @@ int add(int a, int b);
  * Return:
  */
 void print_to_98(int n);
+
+/**
+ * print_times_table - Entry point
+ *
+ * Description: This function prints the tables from 1 to 9
+ *
+ * Return:
+ */
+void print_times_table(int n);
+
 #endif
