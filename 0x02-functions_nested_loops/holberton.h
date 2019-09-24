@@ -29,7 +29,6 @@ void print_alphabet(void);
  */
 void print_alphabet_x10(void);
 
-
 /**
  * _islower - knows if a character is in lowercase
  *
@@ -115,4 +114,14 @@ void times_table(void);
  */
 int add(int a, int b);
 
+/**
+ * print_to_98 - Entry point
+ *
+ * Description: This function prints the numbers from n to 98
+ *
+ * @n: Start number of print
+ *
+ * Return:
+ */
+void print_to_98(int n);
 #endif
