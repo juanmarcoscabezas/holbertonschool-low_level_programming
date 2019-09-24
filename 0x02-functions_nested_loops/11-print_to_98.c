@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
  * print_to_98 - Entry point
  * Description: This function prints the numbers from n to 98
@@ -25,9 +25,7 @@ void print_to_98(int n)
 				aux = aux % number;
 			}
 			if (aux / number < 0)
-			{
 				_putchar(((start / number) * -1) + '0');
-			}
 		}
 		if (start >= 0)
 			_putchar((start % 10) + '0');
