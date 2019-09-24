@@ -98,4 +98,12 @@ int print_last_digit(int n);
  */
 void jack_bauer(void);
 
+/**
+ * times_table - Entry point
+ *
+ * Description: This function prints the tables from 1 to 9
+ *
+ * Return:
+ */
+void times_table(void);
 #endif
