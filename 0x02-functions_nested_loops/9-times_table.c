@@ -18,11 +18,11 @@ void times_table(void)
 		{
 			int res = number * mult;
 
-			if (res > 10)
+			if (res >= 10)
 			{
 				_putchar((res / 10) + '0');
 			}
-			else if (mult > 0)
+			if (res < 10 && mult > 0)
 			{
 				_putchar(' ');
 			}
