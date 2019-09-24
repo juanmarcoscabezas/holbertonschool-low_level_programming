@@ -9,18 +9,19 @@
 int main(void)
 {
 	int start;
-	long int fibonacci = 1;
-	long int last = 1;
+	int fibonacci = 1;
+	int last = 1;
 
 	for (start = 0; start < 50; start++)
 	{
 		if (start < 49)
-			printf("%ld, ", fibonacci);
+			printf("%d, ", fibonacci);
 		else
-			printf("%ld", fibonacci);
-		long int aux = fibonacci;
+			printf("%d", fibonacci);
+		int aux = fibonacci;
+
 		fibonacci = fibonacci + last;
-		last = aux;	
+		last = aux;
 	}
 	putchar('\n');
 	return (0);
