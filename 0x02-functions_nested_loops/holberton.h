@@ -88,4 +88,14 @@ int _abs(int n);
  */
 int print_last_digit(int n);
 
+
+/**
+ * jack_bauer - Entry point
+ *
+ * Description: This function prints the hours and minutes of the day
+ *
+ * Return:
+ */
+void jack_bauer(void);
+
 #endif
