@@ -64,4 +64,16 @@ int _isalpha(int c);
  */
 int print_sign(int n);
 
+
+/**
+ * _abs - Entry point
+ *
+ * Description: This function return the absolute value of a number
+ *
+ * @n: number to return absolute value
+ *
+ * Return: the absolute value of n
+ */
+int _abs(int n);
+
 #endif
