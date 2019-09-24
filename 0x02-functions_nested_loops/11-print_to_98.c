@@ -17,7 +17,7 @@ void print_to_98(int n)
 
 		if (start < 0)
 			_putchar('-');
-		for (number = 100; number >= 10; number /= 10)
+		for (number = 100000; number >= 10; number /= 10)
 		{
 			if (aux / number > 0)
 			{
