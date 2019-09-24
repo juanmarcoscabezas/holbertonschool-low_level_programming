@@ -12,7 +12,6 @@
 int _isalpha(int c)
 {
 	int letter;
-	int digit;
 
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
@@ -24,13 +23,6 @@ int _isalpha(int c)
 	for (letter = 'A'; letter <= 'Z'; letter++)
 	{
 		if (letter == c)
-		{
-			return (1);
-		}
-	}
-	for (digit = '1'; digit <= '9'; digit++)
-	{
-		if (digit == c)
 		{
 			return (1);
 		}
