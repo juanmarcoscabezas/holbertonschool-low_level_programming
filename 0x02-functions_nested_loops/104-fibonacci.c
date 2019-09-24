@@ -21,7 +21,6 @@ int main(void)
 			printf("%lu", fibonacci);
 
 		aux = fibonacci;
-
 		fibonacci = fibonacci + last;
 		last = aux;
 	}
