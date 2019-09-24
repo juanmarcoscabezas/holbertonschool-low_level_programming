@@ -11,6 +11,7 @@ int main(void)
 	int start;
 	int fibonacci = 1;
 	int last = 1;
+	int aux;
 
 	for (start = 0; start < 50; start++)
 	{
@@ -18,7 +19,8 @@ int main(void)
 			printf("%d, ", fibonacci);
 		else
 			printf("%d", fibonacci);
-		int aux = fibonacci;
+
+		aux = fibonacci;
 
 		fibonacci = fibonacci + last;
 		last = aux;
