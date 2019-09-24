@@ -17,11 +17,10 @@ void times_table(void)
 		for (mult = 0; mult <= 9; mult++)
 		{
 			int res = number * mult;
-			
+
 			if (res > 10)
 			{
 				_putchar((res / 10) + '0');
-			
 			}
 			else if (mult > 0)
 			{
