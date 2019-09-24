@@ -76,4 +76,16 @@ int print_sign(int n);
  */
 int _abs(int n);
 
+
+/**
+ * print_last_digit - Entry point
+ *
+ * Description: This function prints the last digit of a number
+ *
+ * @n: number to get the last digit
+ *
+ * Return: the last digit of n
+ */
+int print_last_digit(int n);
+
 #endif
