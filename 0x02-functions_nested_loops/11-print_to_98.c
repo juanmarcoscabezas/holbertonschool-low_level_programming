@@ -10,16 +10,16 @@ void print_to_98(int n)
 {
 	int start = n;
 	int number;
+	int aux;
 
 	while (start != 98)
 	{
-		int aux = start;
-
+		aux = start;
 		if (start < 0)
 			_putchar('-');
 		for (number = 100000; number >= 10; number /= 10)
 		{
-			if (aux / number > 0)
+			if (aux / number > 0 || number < start)
 			{
 				_putchar((aux / number) + '0');
 				aux = aux % number;
