@@ -52,7 +52,6 @@ int _islower(int c);
  */
 int _isalpha(int c);
 
-
 /**
  * print_sign - Entry point
  *
@@ -63,7 +62,6 @@ int _isalpha(int c);
  * Return: 1 if n is positive, 0 is zero, -1 if is less than zero
  */
 int print_sign(int n);
-
 
 /**
  * _abs - Entry point
@@ -76,7 +74,6 @@ int print_sign(int n);
  */
 int _abs(int n);
 
-
 /**
  * print_last_digit - Entry point
  *
@@ -87,7 +84,6 @@ int _abs(int n);
  * Return: the last digit of n
  */
 int print_last_digit(int n);
-
 
 /**
  * jack_bauer - Entry point
@@ -106,4 +102,17 @@ void jack_bauer(void);
  * Return:
  */
 void times_table(void);
+
+/**
+ * add - Entry point
+ *
+ * Description: This function prints the tables from 1 to 9
+ *
+ * @a: Fist integer to add
+ * @b: Secont integer to add
+ *
+ * Return: a + b
+ */
+int add(int a, int b);
+
 #endif
