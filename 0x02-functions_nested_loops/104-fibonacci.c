@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Entry point
  *
@@ -8,22 +9,29 @@
  */
 int main(void)
 {
-	int start;
-	unsigned long int fibonacci = 1;
-	unsigned long int last = 1;
-	unsigned long int aux;
+	int i = 0;
+	unsigned long n1, n2, quotient1, quotient2, rem1, rem2;
 
-	for (start = 0; start < 100; start++)
+	n1 = 1, n2 = 2;
+	while (i < 90)
 	{
-		if (start < 99)
-			printf("%lu, ", fibonacci);
-		else
-			printf("%lu", fibonacci);
-
-		aux = fibonacci;
-		fibonacci = fibonacci + last;
-		last = aux;
+		printf("%lu, %lu, ", n1, n2);
+		n1 += n2, n2 += n1, i += 2;
 	}
-	putchar('\n');
+	printf("%lu, %lu, ", n1, n2);
+	quotient1 = n1 / 100, quotient2 = n2 / 100;
+	rem1 = n1 % 100, rem2 = n2 % 100;
+	while (i < 96)
+	{
+		n1 = quotient1 + quotient2, n2 = rem1 + rem2;
+		n2 > 99 ? n1++ : n2;
+		n2 = n2 % 100;
+		printf("%lu", n1);
+		printf(n2 < 10 ? "0" : "");
+		printf("%lu", n2);
+		printf(i < 95 ? ", " : "\n");
+		quotient1 = quotient2, quotient2 = n1;
+		rem1 = rem2, rem2 = n2, i++;
+	}
 	return (0);
 }
