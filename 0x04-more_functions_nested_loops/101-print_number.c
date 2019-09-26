@@ -8,24 +8,37 @@
  */
 void print_number(int n)
 {
-	int n_copy;
+	int n_copy = n;
 	int divisor = 1;
 
 	if (n < 0)
 	{
+		divisor = -divisor;
 		_putchar('-');
-		n = -n;
+		while (n_copy < -9)
+		{
+			n_copy = n_copy / 10;
+			divisor = divisor * 10;
+		}
+		while (divisor < -1)
+		{
+			_putchar((n / divisor) % 10 + '0');
+			divisor = divisor / 10;
+		}
+		_putchar((n % 10) * -1 + '0');
 	}
-	n_copy = n;
-	while (n_copy > 9)
+	if (n >= 0)
 	{
-		n_copy = n_copy / 10;
-		divisor = divisor * 10;
+		while (n_copy > 9)
+		{
+			n_copy = n_copy / 10;
+			divisor = divisor * 10;
+		}
+		while (divisor > 1)
+		{
+			_putchar((n / divisor) % 10 + '0');
+			divisor = divisor / 10;
+		}
+		_putchar(n % 10 + '0');
 	}
-	while (divisor > 1)
-	{
-		_putchar((n / divisor) % 10 + '0');
-		divisor = divisor / 10;
-	}
-	_putchar(n % 10 + '0');
 }
