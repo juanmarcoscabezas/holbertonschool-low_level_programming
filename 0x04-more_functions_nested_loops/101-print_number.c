@@ -16,9 +16,7 @@ void print_number(int n)
 		_putchar('-');
 		n = -n;
 	}
-	
 	n_copy = n;
-	
 	while (n_copy > 9)
 	{
 		n_copy = n_copy / 10;
