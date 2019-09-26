@@ -10,7 +10,7 @@ int main(void)
 	long int number = 612852475143;
 	long int last_prime;
 	long int start;
-	long int is_prime = 2;i
+	long int is_prime = 2;
 	int valid_prime;
 
 	while (number > 1)
