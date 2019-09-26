@@ -8,15 +8,17 @@
  */
 void print_number(int n)
 {
-	int n_copy = n;
+	int n_copy;
 	int divisor = 1;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n_copy = -n_copy;
 		n = -n;
 	}
+	
+	n_copy = n;
+	
 	while (n_copy > 9)
 	{
 		n_copy = n_copy / 10;
