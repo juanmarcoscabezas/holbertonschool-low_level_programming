@@ -10,7 +10,7 @@ void print_number(int n)
 {
 	int n_copy = n;
 	int divisor = 1;
-	
+
 	if (n < 0)
 	{
 		_putchar('-');
