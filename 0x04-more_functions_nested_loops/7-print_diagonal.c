@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_line - prints diagonal lines
+ * print_diagonal - prints diagonal lines
  * Description - This function prints @n numbers diagomal lines, like a piramid
  * @n: number of diagonal lines
  * Return:
@@ -15,7 +15,7 @@ void print_diagonal(int n)
 	{
 		_putchar('\n');
 	}
-	
+
 	for (next_line = 0; next_line < n; next_line++)
 	{
 		for (start = 0; start < next_line; start++)
