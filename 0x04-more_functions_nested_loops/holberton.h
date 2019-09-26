@@ -90,4 +90,11 @@ void print_square(int n);
  */
 void print_triangle(int size);
 
+/**
+ * print_number - prints integers
+ * Description - This function prints an integer
+ * @n: number of # and lines, size of triangle
+ * Return:
+ */
+void print_number(int n);
 #endif

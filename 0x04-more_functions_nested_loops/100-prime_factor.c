@@ -40,6 +40,7 @@ int main(void)
 		{
 			break;
 		}
+		printf("%ld, ", is_prime);
 	}
 	printf("%ld\n", last_prime);
 	return (0);
