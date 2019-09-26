@@ -25,14 +25,14 @@ int main(void)
 					valid_prime = 0;
 				}
 			}
-			if ( valid_prime == 1)
+			if (valid_prime == 1)
 			{
 				number = number / start;
 				last_prime = start;
 				start = 1;
 			}
 		}
-		start ++;
+		start++;
 	}
 	printf("%ld\n", last_prime);
 	return (0);
