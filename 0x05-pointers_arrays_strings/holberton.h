@@ -54,6 +54,16 @@ void _puts(char *str);
  */
 void print_rev(char *s);
 
+/**
+ * rev_string - Reverse a string
+ * Description: This function reverse a given string
+ * @s: Pointer that contains the string
+ * Return:
+ */
+void rev_string(char *s);
+
+
+
 
 
 #endif
