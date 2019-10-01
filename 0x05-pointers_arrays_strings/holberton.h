@@ -37,6 +37,17 @@ void swap_int(int *a, int *b);
  */
 int _strlen(char *s);
 
+#include "holberton.h"
+/**
+ * _puts - Prints a string
+ * Description: This function prints a given string
+ * @str: Pointer that contains the string
+ * Return:
+ */
+void _puts(char *str);
+
+
+
 
 
 #endif
