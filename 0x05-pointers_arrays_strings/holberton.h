@@ -80,6 +80,16 @@ void puts2(char *str);
  */
 void puts_half(char *str);
 
+/**
+ * print_array - Print an array
+ * Description: This function prints the elements of an array
+ * @a: Pointer that contains the array values
+ * @n: Number of items of the array
+ * Return:
+ */
+void print_array(int *a, int n);
+
+
 
 
 #endif
