@@ -89,6 +89,14 @@ void puts_half(char *str);
  */
 void print_array(int *a, int n);
 
+/**
+ * _strcpy - Copy a string
+ * Description: This function copies a source string into a destiny pointer
+ * @dest: Pointer that receives the string
+ * @src: String to copy on @dest
+ * Return: *char
+ */
+char *_strcpy(char *dest, char *src);
 
 
 
