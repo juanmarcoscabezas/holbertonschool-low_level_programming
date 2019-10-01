@@ -70,6 +70,16 @@ void rev_string(char *s);
  */
 void puts2(char *str);
 
+/**
+ * puts_half - Print half of a string
+ * Description: This function prints half of a string
+ * if the len of @str is odd the function should print
+ * the n last character where n = (len - 1) / 2
+ * @str: Pointer that contains the string
+ * Return:
+ */
+void puts_half(char *str);
+
 
 
 #endif
