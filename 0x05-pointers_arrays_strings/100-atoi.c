@@ -9,22 +9,22 @@
  */
 int _atoi(char *s)
 {
-	int number = 0;
-	int number_copy = 0;
-	int ten_pow = 1; /*Variable to store pows*/
+	int start = 0, number = 0, number_sign = 1, number_copy = 0, ten_pow = 1;
 	int ten_pow_rev = 1; /*Variable to revert the number*/
 	char digit; /*Variable to compare number characteres*/
 	int digit_int; /*Variable to mult by pow*/
 	int found_int = 0; /*variable that knows if the 1st int was found*/
 	int s_is_digit; /*Variable to know if the next char is not int*/
-	
-	while (*s != '\0')
+
+	while (s[start] != '\0')
 	{
 		digit_int = 0;
 		s_is_digit = 0;
+		if (s[start] == '-')
+			number_sign = number_sign * (-1);
 		for (digit = '0'; digit <= '9'; digit++)
 		{
-			if (*s == digit)
+			if (s[start] == digit)
 			{
 				found_int = 1;
 				s_is_digit = 1;
@@ -35,10 +35,8 @@ int _atoi(char *s)
 			digit_int++;
 		}
 		if (found_int == 1 && s_is_digit == 0)
-		{
 			break;
-		}
-		s++;
+		start++;
 	}
 	number_copy = number;
 	number = 0;
@@ -49,5 +47,5 @@ int _atoi(char *s)
 		ten_pow = ten_pow / 10;
 		ten_pow_rev = ten_pow_rev * 10;
 	}
-	return (number);
+	return (number * number_sign);
 }
