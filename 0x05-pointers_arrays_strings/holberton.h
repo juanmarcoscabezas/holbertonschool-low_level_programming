@@ -98,6 +98,13 @@ void print_array(int *a, int n);
  */
 char *_strcpy(char *dest, char *src);
 
+/**
+ * _atoi - String to int
+ * Description: This function convert from string to int
+ * @s: Pointer that contains the numbers
+ * Return: string to int
+ */
+int _atoi(char *s);
 
 
 #endif
