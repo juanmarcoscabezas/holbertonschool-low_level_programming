@@ -62,7 +62,13 @@ void print_rev(char *s);
  */
 void rev_string(char *s);
 
-
+/**
+ * puts2 - Print pair
+ * Description: This function prints every other chaaracter of a string
+ * @str: Pointer that contains the string
+ * Return:
+ */
+void puts2(char *str);
 
 
 
