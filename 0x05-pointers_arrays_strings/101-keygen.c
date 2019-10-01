@@ -1,19 +1,25 @@
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
+#include <stdio.h>
 
-/* betty style doc for function main goes there */
 int main(void)
 {
-	int start = 0, pow = 1;
-	int n = 0;
-	srand(time(0));
-
-	while (start < 10)
+	int acum = 0;
+	int start = 0;
+	int n;
+	char chars[24] = "abcdefghijklmopqrstuvxyz";
+	char pass[50];
+	
+	srand(time(NULL));
+	while (acum < 2772)
 	{
-		n = n + (rand() - RAND_MAX / 2) * pow;
-		pow = pow * 10;
+		n = rand() % 10;
+		pass[start] = chars[n];
+		acum = acum + chars[n];
 		start++;
 	}
-	return (n);
+	n = 2772 - acum;
+	pass[start] = n;
+	printf("%s\n", pass);
+	return (0);
 }
