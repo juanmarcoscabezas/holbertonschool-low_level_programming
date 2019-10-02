@@ -27,7 +27,7 @@ int _atoi(char *s)
 			{
 				found_int = 1;
 				s_is_digit = 1;
-				number = (number * 10 + digit_int);
+				number = (number * 10 - digit_int);
 				break;
 			}
 			digit_int++;
@@ -36,5 +36,7 @@ int _atoi(char *s)
 			break;
 		start++;
 	}
-	return (number * number_sign);
+	if ((number_sign > 0 && number < 0) || (number_sign < 0 && number > 0))
+		return (number * -1);
+	return (number);
 }
