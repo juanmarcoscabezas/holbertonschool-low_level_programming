@@ -1,5 +1,15 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
+/**
+ * _putchar - putchar function
+ *
+ * Description: This function prints characters
+ *
+ * @c: is the entry character that has to be printed
+ *
+ * Return: void
+ */
+int _putchar(char c);
 
 /**
  * _strcat - Return concatenated string
@@ -49,10 +59,10 @@ int _strcmp(char *s1, char *s2);
 void reverse_array(int *a, int n);
 
 /**
- * _strcmp - String to upper
+ * string_toupper - String to upper
  * Description: This function transforms all lowercase letters to upppercase
  * @s: String to transform
- * Return:
+ * Return: @s in uppercase
  */
 char *string_toupper(char *s);
 
@@ -87,5 +97,12 @@ char *leet(char *s);
  */
 char *rot13(char *s);
 
+/**
+ * print_number - Print a number
+ * Description: This function prints a number
+ * @n: Number to print
+ * Return:
+ */
+void print_number(int n);
 
 #endif

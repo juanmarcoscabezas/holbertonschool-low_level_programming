@@ -1,43 +1,44 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
- * _atoi - String to int
- * Description: This function convert from string to int
- * @s: Pointer that contains the numbers
- * Return: string to int
+ * print_number - Print a number
+ * Description: This function prints a number
+ * @n: Number to print
+ * Return:
  */
-int _atoi(char *s)
+void print_number(int n)
 {
-	int start = 0, number = 0, number_sign = 1;
-	char digit; /*Variable to compare number characteres*/
-	int digit_int; /*Variable to mult by pow*/
-	int found_int = 0; /*variable that knows if the 1st int was found*/
-	int s_is_digit; /*Variable to know if the next char is not int*/
+	int n_copy = n;
+	int divisor = 1;
 
-	while (s[start] != '\0')
+	if (n < 0)
 	{
-		digit_int = 0;
-		s_is_digit = 0;
-		if (s[start] == '-')
-			number_sign = number_sign * (-1);
-		if (s[start] >= 48 && s[start] <= 57)
+		divisor = -divisor;
+			_putchar('-');
+		while (n_copy < -9)
 		{
-			if (s[start] == digit)
-			{
-				found_int = 1;
-				s_is_digit = 1;
-				number = (number * 10 - digit_int);
-				break;
-			}
-			digit_int++;
+			n_copy = n_copy / 10;
+			divisor = divisor * 10;
 		}
-		digit_int++;
-		if (found_int == 1 && s_is_digit == 0)
-			break;
-		start++;
+		while (divisor < -1)
+		{
+			_putchar((n / divisor) % 10 + '0');
+			divisor = divisor / 10;
+		}
+		_putchar((n % 10) * -1 + '0');
 	}
-	if ((number_sign > 0 && number < 0) || (number_sign < 0 && number > 0))
-		return (number * -1);
-	return (number);
+	if (n >= 0)
+	{
+		while (n_copy > 9)
+		{
+			n_copy = n_copy / 10;
+			divisor = divisor * 10;
+		}
+		while (divisor > 1)
+		{
+			_putchar((n / divisor) % 10 + '0');
+			divisor = divisor / 10;
+		}
+		_putchar(n % 10 + '0');
+	}
 }
