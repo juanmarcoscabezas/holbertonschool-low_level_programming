@@ -39,5 +39,19 @@ char *_strncpy(char *dest, char *src, int n);
  */
 int _strcmp(char *s1, char *s2);
 
+/**
+ * reverse_array - Reverse an array
+ * Description: This function reverse an array of int
+ * @a: Array to be reversed
+ * @n: Number of elements of the array
+ * Return:
+ */
+void reverse_array(int *a, int n);
+
+
+
+
+
+
 
 #endif
