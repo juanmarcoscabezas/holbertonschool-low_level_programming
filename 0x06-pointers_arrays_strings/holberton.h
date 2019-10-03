@@ -48,6 +48,13 @@ int _strcmp(char *s1, char *s2);
  */
 void reverse_array(int *a, int n);
 
+/**
+ * _strcmp - String to upper
+ * Description: This function transforms all lowercase letters to upppercase
+ * @s: String to transform
+ * Return:
+ */
+char *string_toupper(char *s);
 
 
 
