@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * leet - Encode string
+ * rot13 - Encode string
  * Description: This function encodes a string with rot13
  * @s: String to encode
  * Return: @s encoded

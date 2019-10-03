@@ -80,7 +80,7 @@ char *cap_string(char *s);
 char *leet(char *s);
 
 /**
- * leet - Encode string
+ * rot13 - Encode string
  * Description: This function encodes a string with rot13
  * @s: String to encode
  * Return: @s encoded
