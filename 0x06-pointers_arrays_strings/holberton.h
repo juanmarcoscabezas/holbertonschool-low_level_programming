@@ -56,7 +56,15 @@ void reverse_array(int *a, int n);
  */
 char *string_toupper(char *s);
 
-
+/**
+ * cap_string - Capitalize a string
+ * Description: This function capitalize a string. Separators of words:
+ * Space, tabulation, new line, ',', ';', '.', '!', '?', '"', '(', ')'
+ * '{', '}'
+ * @s: String to capitalize
+ * Return: @s capitalized
+ */
+char *cap_string(char *s);
 
 
 
