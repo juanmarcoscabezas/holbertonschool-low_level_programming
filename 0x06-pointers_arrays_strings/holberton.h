@@ -30,6 +30,14 @@ char *_strncat(char *dest, char *src, int n);
  */
 char *_strncpy(char *dest, char *src, int n);
 
+/**
+ * _strcmp - Compare strings
+ * Description: This function compare two strings
+ * @s1: First string to compare
+ * @s2: Second string to compare
+ * Return: @n bytes of @src
+ */
+int _strcmp(char *s1, char *s2);
 
 
 #endif
