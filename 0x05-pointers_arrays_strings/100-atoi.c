@@ -11,7 +11,6 @@ int _atoi(char *s)
 {
 	int start = 0, number = 0, number_sign = 1, number_copy = 0, ten_pow = 1;
 	int ten_pow_rev = 1; /*Variable to revert the number*/
-	char digit; /*Variable to compare number characteres*/
 	int digit_int; /*Variable to mult by pow*/
 	int found_int = 0; /*variable that knows if the 1st int was found*/
 	int s_is_digit; /*Variable to know if the next char is not int*/
@@ -22,18 +21,14 @@ int _atoi(char *s)
 		s_is_digit = 0;
 		if (s[start] == '-')
 			number_sign = number_sign * (-1);
-		for (digit = '0'; digit <= '9'; digit++)
+		if (s[start] >= 48 && s[start] <= 57)
 		{
-			if (s[start] == digit)
-			{
-				found_int = 1;
-				s_is_digit = 1;
-				number = number + (ten_pow * digit_int);
-				ten_pow = ten_pow * 10;
-				break;
-			}
-			digit_int++;
+			found_int = 1;
+			s_is_digit = 1;
+			number = number + (ten_pow * digit_int);
+			ten_pow = ten_pow * 10;
 		}
+		digit_int++;
 		if (found_int == 1 && s_is_digit == 0)
 			break;
 		start++;
