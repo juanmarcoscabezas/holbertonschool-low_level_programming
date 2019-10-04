@@ -105,4 +105,14 @@ char *rot13(char *s);
  */
 void print_number(int n);
 
+/**
+ * infinite_add - Add numbers
+ * Description: This function add two numbers
+ * @n1: First number to add
+ * @n2: Second number to add
+ * @r: Buffer that stpre the result
+ * @size_r: Size of the buffer
+ * Return: The result of @n1 + @n2, if the result < @r
+ */
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
 #endif
