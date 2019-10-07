@@ -35,6 +35,10 @@ char *_strstr(char *haystack, char *needle)
 			j++;
 			start++;
 		}
+		if ((*(needle + j) == '\0'))
+		{
+			return ("\0");
+		}
 		if (match == 1)
 		{
 			return (haystack + i);
