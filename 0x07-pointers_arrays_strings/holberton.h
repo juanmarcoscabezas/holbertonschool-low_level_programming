@@ -74,6 +74,13 @@ char *_strpbrk(char *s, char *accept);
  */
 char *_strstr(char *haystack, char *needle);
 
+/**
+ * print_chessboard - Prints the chessboard
+ * Description: This function prints a chess board
+ * @a: this pointer contains the chess
+ * Return:
+ */
+void print_chessboard(char (*a)[8]);
 
 
 
