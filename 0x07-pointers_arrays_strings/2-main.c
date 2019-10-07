@@ -11,7 +11,7 @@ int main(void)
     char *s = "hello";
     char *f;
 
-    f = _strchr(s, '<');
+    f = _strchr(s, 'a');
 
     if (f != NULL)
     {
