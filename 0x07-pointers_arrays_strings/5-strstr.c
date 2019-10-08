@@ -15,7 +15,7 @@ char *_strstr(char *haystack, char *needle)
 	int i = 0;
 	int j = 0;
 	int start;
-	int match = 1;
+	int match = 0;
 
 	while (*(haystack + i) != '\0')
 	{
@@ -34,10 +34,6 @@ char *_strstr(char *haystack, char *needle)
 			}
 			j++;
 			start++;
-		}
-		if ((*(needle + j) == '\0'))
-		{
-			return (NULL);
 		}
 		if (match == 1)
 		{
