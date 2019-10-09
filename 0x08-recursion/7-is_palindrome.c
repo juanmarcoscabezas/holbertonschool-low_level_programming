@@ -39,7 +39,7 @@ int verify_palindrome(char *s, int c, int l)
 		return (1);
 	if (c < l && *(s + c) != *(s + l))
 		return (0);
-	return (verify_palidrome(s, c + 1, l - 1));
+	return (verify_palindrome(s, c + 1, l - 1));
 }
 
 /**
@@ -53,5 +53,5 @@ int is_palindrome(char *s)
 {
 	if (*s == '\0')
 		return (0);
-	return (verify_palindrome(*s, 0, palindrome_length(*s, 0)));
+	return (verify_palindrome(s, 0, palindrome_length(s, 0) - 1));
 }
