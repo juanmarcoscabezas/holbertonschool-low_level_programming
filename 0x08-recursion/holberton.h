@@ -66,5 +66,13 @@ int _pow_recursion(int x, int y);
  */
 int _sqrt_recursion(int n);
 
+/**
+ * _is_prime_number - Knows if a number is prime
+ * Description: This function knows if a number
+ * is prime or not
+ * @n: Number to know if it's prime
+ * Return: 1 if @n is prime, 0 otherwise
+ */
+int is_prime_number(int n);
 
 #endif
