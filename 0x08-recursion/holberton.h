@@ -75,4 +75,12 @@ int _sqrt_recursion(int n);
  */
 int is_prime_number(int n);
 
+/**
+ * is_palindrome - Knows if a string is palindrome
+ * Description: This function knows if a given
+ * string is palindrome or not
+ * @s: String to knwo if it´s palindrome
+ * Return: 1 if @n is palindrome, 0 otherwise
+ */
+int is_palindrome(char *s);
 #endif
