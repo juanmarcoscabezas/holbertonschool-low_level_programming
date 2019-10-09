@@ -1,5 +1,13 @@
 #include "holberton.h"
 
+/**
+ * verify_prime - Verify the number given
+ * Description: This function knows if a number
+ * is prime or not
+ * @n: Number to know if it's prime
+ * @c: Counter to go to the next number
+ * Return: 1 if @n is prime, 0 otherwise
+ */
 int verify_prime(int n, int c)
 {
 	if (n == c)
@@ -7,11 +15,11 @@ int verify_prime(int n, int c)
 	else if (n % c == 0)
 		return (0);
 	else
-		return(verify_prime(n, c + 1));
+		return (verify_prime(n, c + 1));
 }
 
 /**
- * _is_prime_number - Knows if a number is prime
+ * is_prime_number - Knows if a number is prime
  * Description: This function knows if a number
  * is prime or not
  * @n: Number to know if it's prime
