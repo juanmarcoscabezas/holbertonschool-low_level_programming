@@ -47,6 +47,15 @@ int _strlen_recursion(char *s);
  */
 int factorial(int n);
 
+/**
+ * _pow_recursion - Returns a pow
+ * Description: This function returns the value
+ * of x raised to the pow of y
+ * @x: Number to find the pow
+ * @y: Number that is the pow
+ * Return: @x^@y
+ */
+int _pow_recursion(int x, int y);
 
 
 
