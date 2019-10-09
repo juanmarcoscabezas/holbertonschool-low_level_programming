@@ -9,12 +9,11 @@
  */
 int _sqrt_find(int n, int c)
 {
-	if (c < 0)
+	if (c == n)
 		return (-1);
 	if (c * c == n)
 		return (c);
-	else
-		return (_sqrt_find(n, c - 1));
+	return (_sqrt_find(n, c + 1));
 }
 
 /**
@@ -32,5 +31,5 @@ int _sqrt_recursion(int n)
 		return (0);
 	if (n == 1)
 		return (1);
-	return (_sqrt_find(n, n));
+	return (_sqrt_find(n, 0));
 }
