@@ -57,6 +57,14 @@ int factorial(int n);
  */
 int _pow_recursion(int x, int y);
 
+/**
+ * _sqrt_recursion - Returns a sqrt
+ * Description: This function returns the value
+ * of the nature square root of @n
+ * @x: Number to find the natural sqrt
+ * Return: natural sqrt of @x, otherwise -1
+ */
+int _sqrt_recursion(int n);
 
 
 #endif
