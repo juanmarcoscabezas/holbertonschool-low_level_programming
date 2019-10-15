@@ -22,7 +22,7 @@ char **strtow(char *str)
 		if (i > 0 && *(str + i) != ' ' && *(str + i - 1) == ' ')
 			words++;
 	}
-	p = malloc(sizeof(char) * words);
+	p = malloc(sizeof(char) * (words + 1));
 	if (p == NULL)
 		return (NULL);
 	for (i = 0, j = 0; *(str + i) != '\0' && j < words; i++)
@@ -48,6 +48,6 @@ char **strtow(char *str)
 			j++;
 		}
 	}
-	*(p + words) = NULL;
+	p[j] = NULL;
 	return (p);
 }
