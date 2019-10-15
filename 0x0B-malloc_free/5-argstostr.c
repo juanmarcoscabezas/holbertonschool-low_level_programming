@@ -39,5 +39,6 @@ char *argstostr(int ac, char **av)
 		*(p + k) = '\n';
 		k++;
 	}
+	*(p + k) = '\0';
 	return (p);
 }
