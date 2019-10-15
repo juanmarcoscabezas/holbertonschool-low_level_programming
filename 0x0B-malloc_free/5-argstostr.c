@@ -5,7 +5,7 @@
 /**
  * argstostr - Concatenates all arguments of a program
  * Description: This function concatenates the arguments
- * of a program 
+ * of a program
  * @ac: Arguments count
  * @av: The value of arguments
  * Return: A pointer to a string that contains the
@@ -14,7 +14,7 @@
 char *argstostr(int ac, char **av)
 {
 	int i, j, k = 0, size = 0;
-	char *p;	
+	char *p;
 
 	if (ac <= 0 || av == NULL)
 	{
