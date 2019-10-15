@@ -54,6 +54,14 @@ char *str_concat(char *s1, char *s2);
  */
 int **alloc_grid(int width, int height);
 
+/**
+ * free_grid - Frees a 2 dimensional array
+ * Description: Frees memory of an array
+ * @grid: Array that gonna be frees
+ * @height: The Height of the 2 dimensional array
+ * Return:
+ */
+void free_grid(int **grid, int height);
 
 
 #endif
