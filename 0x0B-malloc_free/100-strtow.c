@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * count_words - Count words in string
+ * Description: This function count how many words has a string
+ * @str: Given string
+ * Return: How many words has @str
+ */
 int count_words(char *str)
 {
 	int words = 0, c;
@@ -28,11 +34,11 @@ char **strtow(char *str)
 	char **p;
 
 	if (str == NULL || str[0] == 0)
-	{
 		return (NULL);
-	}
 	words = count_words(str);
-	p = malloc(sizeof(char) * (words + 1));
+	if (words == 0)
+		return (NULL);
+	p = malloc(sizeof(**p) * (words + 1));
 	if (p == NULL)
 		return (NULL);
 	for (i = 0, j = 0; *(str + i) != '\0'; i++)
@@ -43,10 +49,12 @@ char **strtow(char *str)
 			start = i;
 		if (i > 0 && *(str + i) != ' ' && *(str + i + 1) == ' ')
 			end = i;
+		if (*(str + i + 1) == '\0')
+			end = i;
 		if (start != -1 && end != -1)
 		{
 			size = end - start + 2;
-			p[j] = malloc(sizeof(char) * size);
+			p[j] = malloc(sizeof(*p) * size);
 			if (p[j] == NULL)
 			{
 				free(p);
