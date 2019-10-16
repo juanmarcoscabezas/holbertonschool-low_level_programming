@@ -2,6 +2,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int count_words(char *str)
+{
+	int words = 0, c;
+
+	for (c = 0; *(str + c) != '\0'; c++)
+	{
+		if (c > 0 && *(str + c) != ' ' && *(str + c - 1) == ' ')
+			words++;
+		if (c == 0 && *(str + c) != ' ')
+			words++;
+	}
+	return (words);
+}
+
 /**
  * strtow - Splits a string into words
  * Description: This function splits a string into words
@@ -10,31 +24,29 @@
  */
 char **strtow(char *str)
 {
-	int i, j, m, n, words = 0, size = 0, start = 0, end = 0;
+	int i, j, m, n, words = 0, size = 0, start = -1, end = -1;
 	char **p;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || str[0] == 0)
 	{
 		return (NULL);
 	}
-	for (i = 0; *(str + i) != '\0'; i++)
-	{
-		if (i > 0 && *(str + i) != ' ' && *(str + i - 1) == ' ')
-			words++;
-	}
-	p = malloc(sizeof(**p) * (words + 1));
+	words = count_words(str);
+	p = malloc(sizeof(char) * (words + 1));
 	if (p == NULL)
 		return (NULL);
-	for (i = 0, j = 0; *(str + i) != '\0' && j < words; i++)
+	for (i = 0, j = 0; *(str + i) != '\0'; i++)
 	{
+		if (i == 0 && *(str + 0) != ' ')
+			start = i;
 		if (i > 0 && *(str + i) != ' ' && *(str + i - 1) == ' ')
 			start = i;
 		if (i > 0 && *(str + i) != ' ' && *(str + i + 1) == ' ')
 			end = i;
-		if (start != 0 && end != 0)
+		if (start != -1 && end != -1)
 		{
 			size = end - start + 2;
-			p[j] = malloc(sizeof(*p) * size);
+			p[j] = malloc(sizeof(char) * size);
 			if (p[j] == NULL)
 			{
 				free(p);
@@ -43,8 +55,8 @@ char **strtow(char *str)
 			for (m = start, n = 0; m <= end; m++, n++)
 				p[j][n] = *(str + m);
 			p[j][n] = '\0';
-			start = 0;
-			end = 0;
+			start = -1;
+			end = -1;
 			j++;
 		}
 	}
