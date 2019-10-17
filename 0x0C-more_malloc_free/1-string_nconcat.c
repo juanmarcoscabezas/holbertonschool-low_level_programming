@@ -68,10 +68,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 	_concat(p, s1, 0, size1);
-	if (size2 <= n)
+	if (n >= size2)
+	{
 		_concat(p, s2, size1, size1 + size2);
+		*(p + size1 + size2)= '\0';
+	}
 	else
+	{
 		_concat(p, s2, size1, size1 + n);
+		*(p + size1 + n)= '\0';
+	}
 
 	return (p);
 }
