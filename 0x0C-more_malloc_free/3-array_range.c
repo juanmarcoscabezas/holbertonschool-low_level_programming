@@ -19,7 +19,8 @@ int *array_range(int min, int max)
 	}
 	how_many = max - min + 1;
 	a = malloc(sizeof(int) * how_many);
-
+	if (a == NULL)
+		return (NULL);
 	for (i = 0; i < how_many; i++)
 	{
 		*(a + i) = min + i;
