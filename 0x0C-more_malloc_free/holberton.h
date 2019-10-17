@@ -19,6 +19,17 @@ int _putchar(char c);
  */
 void *malloc_checked(unsigned int b);
 
+/**
+ * string_nconcat - Concatenates two strings
+ * Description: This function concatenates two strings
+ * the returned pointer should point to a newly allocated
+ * space sin memory witch contains the contents of @s1 and @s2
+ * @s1: First string to concatenate
+ * @s2: Second string to concatenate
+ * @n: How many characters from @s2 wanna copy
+ * Return: A pointer to the new string, NULL on failure
+ */
+char *string_nconcat(char *s1, char *s2, unsigned int n);
 
 
 
