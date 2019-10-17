@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-
+#include <string.h>
 /**
  * _calloc - Alocates memory of an array
  * Description: This function alocates memory
@@ -22,5 +22,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
+	memset(a, 0, nmemb * size);
 	return (a);
 }
