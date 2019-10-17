@@ -60,7 +60,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	size1 = string_length(s1);
 	size2 = string_length(s2);
-	if (n >= size)
+	if (n >= size2)
 		p = malloc(sizeof(char) * (size1 + size2) + 1);
 	else
 		p = malloc(sizeof(char) * (size1 + n) + 1);
