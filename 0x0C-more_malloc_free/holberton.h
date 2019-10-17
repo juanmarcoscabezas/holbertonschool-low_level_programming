@@ -50,6 +50,16 @@ void *_calloc(unsigned int nmemb, unsigned int size);
  */
 int *array_range(int min, int max);
 
+/**
+ * _realloc - Reallocates a memory block
+ * Description: This function reallocates a memmory block
+ * using malloc and free
+ * @ptr: The pointer allocated
+ * @old_size: Size in bytes of allocated space for @ptr
+ * @new_size: New size in bytes for @ptr
+ * Return: A pointer to the created array
+ */
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
 
 
