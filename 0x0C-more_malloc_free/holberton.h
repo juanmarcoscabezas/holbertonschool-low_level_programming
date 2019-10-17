@@ -41,12 +41,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n);
  */
 void *_calloc(unsigned int nmemb, unsigned int size);
 
-
-
-
-
-
-
+/**
+ * array_range - Creates an array of int
+ * Description: This function creates an array of integer
+ * @min: Min valued of array
+ * @max: Max value of array
+ * Return: A pointer to the created array
+ */
+int *array_range(int min, int max);
 
 
 
