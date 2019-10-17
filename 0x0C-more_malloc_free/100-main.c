@@ -42,6 +42,8 @@ int main(void)
     int i;
 
     p = malloc(sizeof(char) * 10);
+    p[0] = 'z';
+    
     p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
     i = 0;
     while (i < 98)
