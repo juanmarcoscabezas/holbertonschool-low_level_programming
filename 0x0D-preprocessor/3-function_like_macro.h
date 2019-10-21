@@ -1,5 +1,6 @@
-#ifndef ABS
+#ifndef ABSFILE
 
+#define ABSFILE
 #define ABS(x) ((x > 0) ? x : -x)
 
 #endif
