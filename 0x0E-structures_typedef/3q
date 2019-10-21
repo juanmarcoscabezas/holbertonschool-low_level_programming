@@ -1,0 +1,15 @@
+#include "dog.h"
+#include <stdio.h>
+
+/**
+ * free_dog - Frees a dog
+ * Description: This function frees a dog
+ * @d: Dog´s structure
+ * Return:
+ */
+void free_dog(dog_t *d)
+{
+	free(d->name);
+	free(d->owner);
+	free(d);
+}
