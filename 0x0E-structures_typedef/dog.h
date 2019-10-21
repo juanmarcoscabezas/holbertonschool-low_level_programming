@@ -25,6 +25,13 @@ struct dog
  */
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
+/**
+ * print_dog - Print dog´s
+ * Description: This function prints a dog info
+ * @d: Dog´s structure
+ * Return:
+ */
+void print_dog(struct dog *d);
 
 
 #endif
