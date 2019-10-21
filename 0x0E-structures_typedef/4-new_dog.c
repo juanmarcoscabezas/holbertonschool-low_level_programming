@@ -23,11 +23,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	while (*(owner + j) != '\0')
 		j++;
 	name_cpy = malloc(sizeof(char) * (i + 1));
+	if (name_cpy == NULL)
+	{
+		free(my_dog);
+		return (NULL);
+	}
 	owner_cpy = malloc(sizeof(char) * (j + 1));
-	if (name_cpy == NULL || owner_cpy == NULL)
+	if (owner_cpy == NULL)
 	{
 		free(name_cpy);
-		free(owner_cpy);
 		free(my_dog);
 		return (NULL);
 	}
