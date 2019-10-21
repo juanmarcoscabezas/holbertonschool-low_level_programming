@@ -31,18 +31,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(my_dog);
 		return (NULL);
 	}
-	i = 0;
-	j = 0;
 	while (*(name + i) != '\0')
 	{
 		*(name_cpy + i) = *(name + i);
 		i++;
 	}
+	*(name_cpy + i) = *(name + i);
 	while (*(owner + j) != '\0')
 	{
 		*(owner_cpy + j) = *(owner + j);
 		j++;
 	}
+	*(owner_cpy + j) = *(owner + j);
 	my_dog->name = name_cpy;
 	my_dog->age = age;
 	my_dog->owner = owner_cpy;
