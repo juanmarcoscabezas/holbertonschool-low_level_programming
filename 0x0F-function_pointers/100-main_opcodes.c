@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < value; i++)
 	{
-		printf("%2hhx", *((char *) main + i));
+		printf("%02hhx", *((char *) main + i));
 		if (i < value - 1)
 			printf(" ");
 		else
