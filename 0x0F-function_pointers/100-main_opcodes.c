@@ -29,7 +29,8 @@ int main(int argc, char *argv[])
 		printf("%2hhx", *((char *) main + i));
 		if (i < value - 1)
 			printf(" ");
+		else
+			print("\n");
 	}
-	printf("\n");
 	return (0);
 }
