@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 		if (i < value - 1)
 			printf(" ");
 		else
-			print("\n");
+			printf("\n");
 	}
 	return (0);
 }
