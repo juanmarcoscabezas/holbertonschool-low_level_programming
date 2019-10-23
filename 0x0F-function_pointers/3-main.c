@@ -23,13 +23,13 @@ int main(int argc, char *argv[])
 	f = get_op_func(argv[2]);
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	res = f(a, b);
 
-	if (!res)
+	if (!f)
 	{
 		printf("Error\n");
 		exit(99);
 	}
+	res = f(a, b);
 	printf("%d\n", res);
 
 	return (0);
