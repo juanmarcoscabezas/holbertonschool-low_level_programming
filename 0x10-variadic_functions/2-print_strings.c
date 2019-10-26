@@ -25,13 +25,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("%s", s);
 		else
 			printf("(nil)");
-		if (i < n - 1)
+		if (i < (n - 1) && separator)
 		{
-			if (separator)
-				printf("%s", separator);
+			printf("%s", separator);
 		}
-		else
-			printf("\n");
 	}
+	printf("\n");
 	va_end(args_list);
 }
