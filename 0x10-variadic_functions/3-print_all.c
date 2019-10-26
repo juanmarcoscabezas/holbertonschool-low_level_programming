@@ -12,6 +12,7 @@ void print_all(const char * const format, ...)
 	va_list args_list;
 	int i = 0;
 	char op;
+	char *s;
 
 	va_start(args_list, format);
 	while (*(format + i))
@@ -29,7 +30,8 @@ void print_all(const char * const format, ...)
 				printf("%f", va_arg(args_list, double));
 				break;
 			case 's':
-				printf("%s", va_arg(args_list, char *));
+				s = va_arg(args_list, char *);
+				printf("%s", s);
 				break;
 		}
 		i++;
