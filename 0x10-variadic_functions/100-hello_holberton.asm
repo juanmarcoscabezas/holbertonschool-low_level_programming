@@ -1,19 +1,31 @@
-section     .text
-global      _start                              ;must be declared for linker (ld)
-
-_start:                                         ;tell linker entry point
-
-    mov     edx,len                             ;message length
-    mov     ecx,msg                             ;message to write
-    mov     ebx,1                               ;file descriptor (stdout)
-    mov     eax,4                               ;system call number (sys_write)
-    int     0x80                                ;call kernel
-
-    mov     eax,1                               ;system call number (sys_exit)
-    int     0x80                                ;call kernel
-
-section     .data
-
-msg     db  'Hello, Holberton',0xa                 ;our dear string
-len     equ $ - msg                             ;length of our dear string
-
+	.file	"100-hello.c"
+	.section	.rodata
+.LC0:
+	.string	"Hello, Holberton\n"
+	.text
+	.globl	main
+	.type	main, @function
+main:
+.LFB0:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movq	$.LC0, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movl	$18, %edx
+	movq	%rax, %rsi
+	movl	$1, %edi
+	call	write
+	movl	$0, %eax
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	main, .-main
+	.ident	"GCC: (Ubuntu 5.5.0-12ubuntu1~14.04) 5.5.0 20171010"
+	.section	.note.GNU-stack,"",@progbits
