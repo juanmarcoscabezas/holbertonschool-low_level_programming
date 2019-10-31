@@ -73,14 +73,4 @@ list_t *add_node_end(list_t **head, const char *str);
  */
 void free_list(list_t *head);
 
-/**
- * init - Inits before main
- * Description: This function starts before main
- * @void: Void param
- * Return: Always 0;
- */
-static int init(void);
-
-static init init_before = init();
-
 #endif
