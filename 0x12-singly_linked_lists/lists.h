@@ -50,7 +50,7 @@ size_t list_len(const list_t *h);
  * Description: Function that adds a new node
  * in a linked list
  * @head: Head of the list
- * @str: Name to add to the node 
+ * @str: Name to add to the node
  * Return: A size_t of @h
  */
 list_t *add_node(list_t **head, const char *str);
