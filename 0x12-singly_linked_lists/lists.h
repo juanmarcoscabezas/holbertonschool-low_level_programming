@@ -65,5 +65,12 @@ list_t *add_node(list_t **head, const char *str);
  */
 list_t *add_node_end(list_t **head, const char *str);
 
+/**
+ * free_list - Frees a list
+ * Description: Function that frees a linked list
+ * @head: Head of the list
+ * Return:
+ */
+void free_list(list_t *head);
 
 #endif
