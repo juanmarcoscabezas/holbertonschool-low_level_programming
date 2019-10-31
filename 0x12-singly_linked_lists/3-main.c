@@ -11,8 +11,21 @@
 int main(void)
 {
     list_t *head;
+    list_t *new;
+    list_t hello = {"World", 5, NULL};
 
-    head = NULL;
+    head = &hello;
+    new = malloc(sizeof(list_t));
+    if (new == NULL)
+    {
+        printf("Error\n");
+        return (1);
+    }
+    new->str = strdup("Hello");
+    new->len = 5;
+    new->next = head;
+    head = new;
+
     add_node_end(&head, "Anne");
     add_node_end(&head, "Colton");
     add_node_end(&head, "Corbin");
