@@ -14,17 +14,18 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *new_node = malloc(sizeof(listint_t));
 	unsigned int counter = 0;
 
-	new_node->n = n;
-
 	if (!new_node)
 		return (NULL);
+
+	new_node->n = n;
+
 	if (idx == 0)
 	{
-		new_node->next = *head;
+		new_node->next = node_to_find;
 		*head = new_node;
 		return (new_node);
 	}
-	while (counter < idx - 1)
+	for(counter = 0; counter < idx - 1; counter++)
 	{
 		if (!node_to_find)
 		{
@@ -32,7 +33,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			return (NULL);
 		}
 		node_to_find = node_to_find->next;
-		counter++;
 	}
 	new_node->next = node_to_find->next;
 	node_to_find->next = new_node;
