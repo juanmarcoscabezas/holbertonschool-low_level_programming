@@ -24,17 +24,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = new_node;
 		return (new_node);
 	}
-	while (node_to_find)
+	while (counter < idx - 1)
 	{
-		if (counter == idx - 1)
+		if (!node_to_find)
 		{
-			new_node->next = node_to_find->next;
-			node_to_find->next = new_node;
-			return (new_node);
+			free(new_node);
+			return (NULL);
 		}
 		node_to_find = node_to_find->next;
 		counter++;
 	}
-	free(new_node);
-	return (NULL);
+	new_node->next = node_to_find->next;
+	node_to_find->next = new_node;
+	return (new_node);
 }
