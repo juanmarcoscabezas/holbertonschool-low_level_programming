@@ -82,10 +82,18 @@ void free_listint2(listint_t **head);
  * pop_listint - Pop an element from a list
  * Description: Function that pops a element from a linked list
  * @head: Head of the list
- * Return:
+ * Return: 0 if @head is empty, head->n otherwise
  */
 int pop_listint(listint_t **head);
 
+/**
+ * get_nodeint_at_index - Get an index from a list
+ * Description: This function gets an elements from a list
+ * @head: List loop
+ * @index: Index to find and return
+ * Return: An node from a list in the index @index
+ */
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 
 
 
