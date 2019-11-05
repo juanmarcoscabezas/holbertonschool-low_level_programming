@@ -5,7 +5,7 @@
  * Description: This function gets an elements from a list
  * @head: List loop
  * @index: Index to find and return
- * Return: An node from a list in the index @index
+ * Return: A node from a list in the index @index
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {

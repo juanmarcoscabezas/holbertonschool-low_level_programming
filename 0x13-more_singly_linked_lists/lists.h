@@ -103,5 +103,14 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
  */
 int sum_listint(listint_t *head);
 
+/**
+ * insert_nodeint_at_index - Inserts a node in alist
+ * Description: This function inserts a node in a list in an specific position
+ * @head: List loop
+ * @idx: Index where gonna insert
+ * @n: Number to insert
+ * Return: A new node inserted in list in the index @index
+ */
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 
 #endif
