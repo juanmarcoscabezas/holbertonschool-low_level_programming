@@ -19,6 +19,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	if (!head)
 	{
+		free(new_node);
 		return (NULL);
 	}
 	while (node_to_find)
@@ -32,5 +33,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		node_to_find = node_to_find->next;
 		counter++;
 	}
+	free(new_node);
 	return (NULL);
 }
