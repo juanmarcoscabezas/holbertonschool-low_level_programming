@@ -4,7 +4,7 @@
  * pop_listint - Pop an element from a list
  * Description: Function that pops a element from a linked list
  * @head: Head of the list
- * Return:
+ * Return: 0 if @head is empty, head->n otherwise
  */
 int pop_listint(listint_t **head)
 {
