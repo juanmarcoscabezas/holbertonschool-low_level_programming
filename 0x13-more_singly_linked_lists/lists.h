@@ -113,4 +113,15 @@ int sum_listint(listint_t *head);
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 
+/**
+ * delete_nodeint_at_index - Deletes a node in alist
+ * Description: This function deletes a node in a list in an specific position
+ * @head: List loop
+ * @index: Index where gonna delete
+ * Return: 1 if it succeeded, -1 if it failed
+ */
+int delete_nodeint_at_index(listint_t **head, unsigned int index);
+
+
+
 #endif
