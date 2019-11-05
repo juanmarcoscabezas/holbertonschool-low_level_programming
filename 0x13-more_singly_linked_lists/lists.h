@@ -78,4 +78,15 @@ void free_listint(listint_t *head);
  */
 void free_listint2(listint_t **head);
 
+/**
+ * pop_listint - Pop an element from a list
+ * Description: Function that pops a element from a linked list
+ * @head: Head of the list
+ * Return:
+ */
+int pop_listint(listint_t **head);
+
+
+
+
 #endif
