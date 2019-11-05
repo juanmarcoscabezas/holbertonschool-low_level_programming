@@ -26,7 +26,6 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-
 /**
  * print_listint - Prints a list
  * Description: THis function prints all the elements of a list
@@ -43,6 +42,15 @@ size_t print_listint(const listint_t *h);
  */
 size_t listint_len(const listint_t *h);
 
+/**
+ * add_nodeint - Adds a node to the begining
+ * Description: Function that adds a new node
+ * in a linked list to the begining
+ * @head: Head of the list
+ * @n: Number to add to the list
+ * Return: A pointer to the new element
+ */
+listint_t *add_nodeint(listint_t **head, const int n);
 
 
 
