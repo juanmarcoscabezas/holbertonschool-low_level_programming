@@ -130,5 +130,15 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index);
  */
 listint_t *reverse_listint(listint_t **head);
 
+/**
+ * print_listint - Prints a list (safe version)
+ * Description: This function prints all the elements of a list
+ * (safe version)
+ * @head: List to print
+ * Return: Size of @h
+ */
+size_t print_listint_safe(const listint_t *head);
+
+
 
 #endif
