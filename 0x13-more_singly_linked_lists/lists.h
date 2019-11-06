@@ -122,6 +122,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 
+/**
+ * reverse_listint - Resverses a list
+ * Description: This function reverses a list
+ * @head: List to reverse
+ * Return: A pointer to the first element
+ */
+listint_t *reverse_listint(listint_t **head);
 
 
 #endif
