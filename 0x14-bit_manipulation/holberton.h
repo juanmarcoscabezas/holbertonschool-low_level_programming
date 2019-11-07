@@ -36,5 +36,13 @@ void print_binary(unsigned long int n);
  */
 int get_bit(unsigned long int n, unsigned int index);
 
+/**
+ * set_bit - Sets a bit
+ * Description: This function sets a bit from a number
+ * @n: Number to set bit
+ * @index: Index of the bit to set
+ * Return: Bit at position @index, -1 if an error occurred
+ */
+int set_bit(unsigned long int *n, unsigned int index);
 
 #endif
