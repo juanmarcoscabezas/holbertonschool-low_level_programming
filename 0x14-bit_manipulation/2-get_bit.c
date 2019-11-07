@@ -18,7 +18,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		n = n / 2;
 		i++;
 	}
-	if (index > i)
+	if (index >= i)
 		return (-1);
 	return (binary_array[index]);
 }
