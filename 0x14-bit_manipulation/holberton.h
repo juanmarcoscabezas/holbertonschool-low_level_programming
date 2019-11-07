@@ -45,4 +45,16 @@ int get_bit(unsigned long int n, unsigned int index);
  */
 int set_bit(unsigned long int *n, unsigned int index);
 
+/**
+ * clear_bit - Clears a bit
+ * Description: This function clears a bit from a number
+ * @n: Number to clear bit
+ * @index: Index of the bit to clear
+ * Return: Bit at position @index, -1 if an error occurred
+ */
+int clear_bit(unsigned long int *n, unsigned int index);
+
+
+
+
 #endif
