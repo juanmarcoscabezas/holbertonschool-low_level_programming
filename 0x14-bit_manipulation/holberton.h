@@ -1,5 +1,8 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
+
+#include <stdio.h>
+
 /**
  * _putchar - putchar function
  * Description: This function prints characters
@@ -16,6 +19,13 @@ int _putchar(char c);
  */
 unsigned int binary_to_uint(const char *b);
 
+/**
+ * print_binary - Prints a number in binary
+ * Description: This function prints a number in binary
+ * @n: Number to print
+ * Return:
+ */
+void print_binary(unsigned long int n);
 
 
 
