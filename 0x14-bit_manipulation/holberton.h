@@ -27,6 +27,14 @@ unsigned int binary_to_uint(const char *b);
  */
 void print_binary(unsigned long int n);
 
+/**
+ * get_bit - Gets a bit
+ * Description: This function a bit from a number
+ * @n: Number to find bit
+ * @index: Index of the bit to find
+ * Return: Bit at position @index, -1 if an error occurred
+ */
+int get_bit(unsigned long int n, unsigned int index);
 
 
 #endif
