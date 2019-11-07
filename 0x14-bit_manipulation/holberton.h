@@ -54,7 +54,14 @@ int set_bit(unsigned long int *n, unsigned int index);
  */
 int clear_bit(unsigned long int *n, unsigned int index);
 
-
+/**
+ * flip_bits - Flips a bit
+ * Description: This function flips a bit from a number
+ * @n: Number to flip
+ * @m: Number to flip
+ * Return: How many different bites has @m and @n
+ */
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
 
 #endif
