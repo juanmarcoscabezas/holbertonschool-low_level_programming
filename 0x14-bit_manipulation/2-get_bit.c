@@ -9,7 +9,7 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int binary_array[64];
+	int binary_array[65];
 	unsigned int i = 0;
 
 	while (n > 0)
@@ -18,7 +18,9 @@ int get_bit(unsigned long int n, unsigned int index)
 		n = n / 2;
 		i++;
 	}
-	if (index >= i)
+	if (index > 64)
 		return (-1);
+	if (index > i)
+		return (0);
 	return (binary_array[index]);
 }
