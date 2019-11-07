@@ -9,9 +9,14 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 32768;
-	int print_zero = 0;
+	unsigned long int mask = 1;
+	int print_zero = 0, counter = 63;
 
+	while (counter > 0)
+	{
+		mask = mask << 1;
+		counter--;
+	}
 	if (n == 0)
 	{
 		printf("0");
