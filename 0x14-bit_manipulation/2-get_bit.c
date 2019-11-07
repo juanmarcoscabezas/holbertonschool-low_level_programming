@@ -11,7 +11,9 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int binary_array[64], i = 0;
-
+	
+	if (index > 64)
+		return (-1);
 	while (n > 0)
 	{
 		binary_array[i] = n % 2;
