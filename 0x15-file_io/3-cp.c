@@ -62,14 +62,16 @@ int main(int argc, char *argv[])
 	/* Opening file_to */
 	fd_to = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd_to == -1)
-		error_on_read(file_to);
-	/* Reading file_from */
+		error_on_write(file_to);
+	/* Reading file_from & writing on file_to*/
 	do {
 		read_from = read(fd_from, buffer, 1024);
 		write_to = write(fd_to, buffer, read_from);
 		if (write_to == -1)
 			error_on_write(file_to);
 	} while (read_from > 0);
+	if (read_from == -1)
+		error_on_read(file_from);
 	/* Close file_from */
 	close_from = close(fd_from);
 	if (close_from == -1)
