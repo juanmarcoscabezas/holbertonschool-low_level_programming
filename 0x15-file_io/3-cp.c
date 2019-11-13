@@ -1,62 +1,39 @@
 #include "holberton.h"
 
 /**
- * _strlen - Return the len of a string
- * Description: This function shows the length of a given string
- * @s: Pointer that contains the string
- * Return: @s len
+ * error_on_read - Handling errors
+ * Description: Function to handle read error
+ * @filename: File with error
+ * Return:
  */
-int _strlen(const char *s)
+void error_on_read(char *filename)
 {
-	int len = 0;
-
-	while (*s != '\0')
-	{
-		len++;
-		s++;
-	}
-	return (len);
+	dprintf(2, "Error: Can't read from file %s\n", filename);
+	exit(98);
 }
 
 /**
- * create_file - Creates a file
- * Description: This function creates file
- * @filename: File to create
- * @text_content: String to write in the file
- * Return: 1 on success, -1 otherwise
+ * error_on_write - Handling errors
+ * Description: Function to handle read error
+ * @filename: File with error
+ * Return:
  */
-int create_file(const char *filename, char *text_content)
+void error_on_write(char *filename)
 {
-	int fd, w, c;
+	dprintf(2, "Error: Can't write to %s\n", filename);
+	exit(99);
+}
 
-	if (!filename)
-		return (-1);
-
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
-	if (fd == -1)
-	{
-		dprintf(2, "Error: Can't write to %s\n", filename);
-		exit(99);
-	}
-
-	if (text_content)
-		w = write(fd, text_content, _strlen(text_content));
-
-	if (w == -1)
-	{
-		dprintf(2, "Error: Can't write to %s\n", filename);
-		exit(99);
-	}
-
-	c = close(fd);
-
-	if (c == -1)
-	{
-		dprintf(2, "Error: Can't close fd %s\n", filename);
-		exit(100);
-	}
-	return (fd);
+/**
+ * error_on_close - Handling errors
+ * Description: Function to handle read error
+ * @filename: File with error
+ * Return:
+ */
+void error_on_close(char *filename)
+{
+	dprintf(2, "Error: Can't close fd %s\n", filename);
+	exit(100);
 }
 
 /**
@@ -68,8 +45,10 @@ int create_file(const char *filename, char *text_content)
  */
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, r, c;
+	int fd_from, fd_to, read_from, write_to, close_from, close_to;
 	char buffer[1024];
+	char *file_from = argv[1];
+	char *file_to = argv[2];
 
 	if (argc != 3)
 	{
@@ -77,27 +56,27 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	/* Opening file_from */
-	file_from = open(argv[1], O_RDONLY);
-	/* file_from open fails */
-	if (file_from == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	/* Read file_from */
-	r = read(file_from, buffer, 1024);
-	if (r == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	file_to = create_file(argv[2], buffer);
-	c = close(file_from);
-	if (c == -1)
-	{
-		dprintf(2, "Error: Can't close fd %s\n", argv[1]);
-		exit(100);
-	}
-	file_to++;
+	fd_from = open(file_from, O_RDONLY);
+	if (fd_from == -1)
+		error_on_read(file_from);
+	/* Opening file_to */
+	fd_to = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (fd_to == -1)
+		error_on_read(file_to);
+	/* Reading file_from */
+	do {
+		read_from = read(fd_from, buffer, 1024);
+		write_to = write(fd_to, buffer, read_from);
+		if (write_to == -1)
+			error_on_write(file_to);
+	} while (read_from > 0);
+	/* Close file_from */
+	close_from = close(fd_from);
+	if (close_from == -1)
+		error_on_close(file_from);
+	/* Close file_to */
+	close_to = close(fd_to);
+	if (close_to == -1)
+		error_on_close(file_to);
 	return (0);
 }
