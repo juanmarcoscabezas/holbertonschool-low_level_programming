@@ -32,7 +32,7 @@ void error_on_write(char *filename)
  */
 void error_on_close(int fd)
 {
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd);
 	exit(100);
 }
 
