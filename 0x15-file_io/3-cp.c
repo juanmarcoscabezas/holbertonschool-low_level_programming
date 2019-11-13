@@ -51,9 +51,9 @@ int create_file(const char *filename, char *text_content)
 
 	c = close(fd);
 
-	if (c != 0)
+	if (c == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", c);
+		dprintf(2, "Error: Can't close fd %s\n", filename);
 		exit(100);
 	}
 	return (fd);
@@ -69,22 +69,22 @@ int create_file(const char *filename, char *text_content)
 int main(int argc, char *argv[])
 {
 	int file_from, file_to, r, c;
-	void *buffer;
+	char buffer[1024];
 
 	if (argc != 3)
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
+	/* Opening file_from */
 	file_from = open(argv[1], O_RDONLY);
+	/* file_from open fails */
 	if (file_from == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	buffer = malloc(1024);
-	if (!buffer)
-		return (0);
+	/* Read file_from */
 	r = read(file_from, buffer, 1024);
 	if (r == -1)
 	{
@@ -93,9 +93,9 @@ int main(int argc, char *argv[])
 	}
 	file_to = create_file(argv[2], buffer);
 	c = close(file_from);
-	if (c != 0)
+	if (c == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", c);
+		dprintf(2, "Error: Can't close fd %s\n", argv[1]);
 		exit(100);
 	}
 	file_to++;
