@@ -27,7 +27,7 @@ void error_on_write(char *filename)
 /**
  * error_on_close - Handling errors
  * Description: Function to handle read error
- * @filename: File with error
+ * @fd: File description
  * Return:
  */
 void error_on_close(int fd)
