@@ -64,7 +64,8 @@ int main(int argc, char *argv[])
 	if (fd_to == -1)
 		error_on_write(file_to);
 	/* Reading file_from & writing on file_to*/
-	while ((read_from = read(fd_from, buffer, 1024)) > 0) {
+	while ((read_from = read(fd_from, buffer, 1024)) > 0)
+	{
 		write_to = write(fd_to, buffer, read_from);
 		if (write_to == -1 || read_from != write_to)
 			error_on_write(file_to);
