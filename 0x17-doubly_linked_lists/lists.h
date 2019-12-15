@@ -37,6 +37,14 @@ size_t print_dlistint(const dlistint_t *h);
  */
 size_t dlistint_len(const dlistint_t *h);
 
+/**
+ * add_dnodeint - Function adds a new node to a doubly linked list
+ * Description: This function adds a node at the start of a linked list
+ * @head: Head of the doubly linked list
+ * @n: Number to add
+ * Return: Number of elements in @h
+ */
+dlistint_t *add_dnodeint(dlistint_t **head, const int n);
 
 
 
