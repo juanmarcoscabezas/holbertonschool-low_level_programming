@@ -5,7 +5,8 @@ b = 0
 for i in range(1000):
     for j in range(1000):
         if str(i * j) == str(i * j)[::-1]:
-            number = i * j
-            a = i
-            b = j
+            if i * j > number:
+                number = i * j
+                a = i
+                b = j
 print("The largest palindrome number is {:d} * {:d} = {:d}".format(a, b, number))
