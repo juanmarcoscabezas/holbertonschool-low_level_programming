@@ -89,4 +89,15 @@ int sum_dlistint(dlistint_t *h);
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 
+/**
+ * delete_dnodeint_at_index - Function that deletes a doubly linked list node
+ * Description: This function deletes a doubly linked list item at the nth pos
+ * @head: Head of the doubly linked list
+ * @index: Index of the node to remove
+ * Return: Number of nodes
+ */
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+
+
+
 #endif
