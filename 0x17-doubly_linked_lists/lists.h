@@ -55,6 +55,13 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n);
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 
+/**
+ * free_dlistint - Function that frees a doubly linked list
+ * Description: This function frees a doubly linked list
+ * @head: Head of the doubly linked list
+ * Return:
+ */
+void free_dlistint(dlistint_t *head);
 
 
 
