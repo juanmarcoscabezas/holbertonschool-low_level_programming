@@ -46,7 +46,14 @@ size_t dlistint_len(const dlistint_t *h);
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n);
 
-
+/**
+ * add_dnodeint_end - Function adds a new node to a doubly linked list
+ * Description: This function adds a node at the end of a linked list
+ * @head: Head of the doubly linked list
+ * @n: Number to add
+ * Return: Number of elements in @h
+ */
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 
 
 
