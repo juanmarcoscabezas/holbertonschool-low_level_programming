@@ -11,9 +11,12 @@ size_t print_dlistint(const dlistint_t *h)
 	const dlistint_t *head = h;
 	size_t number_nodes = 0;
 
-	while (head->prev)
+	if (head)
 	{
-		head = head->prev;
+		while (head->prev)
+		{
+			head = head->prev;
+		}
 	}
 	while (head)
 	{
