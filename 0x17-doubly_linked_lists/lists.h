@@ -20,7 +20,6 @@ typedef struct dlistint_s
 	struct dlistint_s *next;
 } dlistint_t;
 
-
 /**
  * print_dlistint - Function that prints a doubly linked list
  * Description: This function prints a doubly linked list
@@ -63,6 +62,14 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
  */
 void free_dlistint(dlistint_t *head);
 
+/**
+ * get_dnodeint_at_index - Function returns the nth index of linked list
+ * Description: This function returns the nth element of a doubly linked list
+ * @head: Head of the doubly linked list
+ * @index: Index of the element to find
+ * Return: Number of elements in @h
+ */
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 
 
 
