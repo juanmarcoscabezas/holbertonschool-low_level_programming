@@ -71,6 +71,13 @@ void free_dlistint(dlistint_t *head);
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 
+/**
+ * sum_dlistint - Function that sums a doubly linked list
+ * Description: This function sums a doubly linked list
+ * @h: Head of the doubly linked list
+ * Return: Number of nodes
+ */
+int sum_dlistint(dlistint_t *h);
 
 
 #endif
