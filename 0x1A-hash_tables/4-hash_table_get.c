@@ -1,10 +1,11 @@
 #include "hash_tables.h"
 
 /**
- *
- *
- *
- *
+ * hash_table_get - Retrieves a value associated with a key
+ * Description: This function retrieves a value associated with a key
+ * @ht: The hash table to look into
+ * @key: The key to find
+ * Return: The associated element, or NULL if key can not be found
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
@@ -18,7 +19,14 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	node = ht->array[hash];
 
-	if (node)
-		return (node->value);
+	while (node)
+	{
+		if (strcmp((char *) node->key, key) == 0)
+		{
+			printf("next->%p\n", (void *) node->next);
+			return (node->value);
+		}
+		node = node->next;
+	}
 	return (NULL);
 }
