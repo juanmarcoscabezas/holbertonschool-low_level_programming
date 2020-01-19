@@ -28,24 +28,24 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->next = NULL;
 
 	array = ht->array;
-	head = array[0];
+	head = array[hash];
 
 	if (!head)
 	{
 		ht->array[hash] = new_node;
 		return (1);
 	}
-	/*while (head)
+	while (head)
 	{
 		if (strcmp((char *) head->key, key) == 0)
 		{
-			head->value = (char *) value;
+			free(head->value);
+			head->value = strdup(value);
 			return (1);
 		}
 		head = head->next;
-	}*/
-	head = ht->array[hash];
-	new_node->next = head;
-	head = new_node;
+	}
+	new_node->next = ht->array[hash];
+	ht->array[hash] = new_node;
 	return (1);
 }

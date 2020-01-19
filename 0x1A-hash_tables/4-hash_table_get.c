@@ -21,9 +21,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	while (node)
 	{
-		if (strcmp((char *) node->key, key) == 0)
+		if (strcmp(node->key, key) == 0)
 		{
-			printf("next->%p\n", (void *) node->next);
 			return (node->value);
 		}
 		node = node->next;
